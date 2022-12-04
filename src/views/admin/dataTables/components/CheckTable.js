@@ -1,7 +1,8 @@
 import {
   Flex,
   Table,
-  Checkbox,
+  Progress,
+  Icon,
   Tbody,
   Td,
   Text,
@@ -21,7 +22,10 @@ import {
 // Custom components
 import Card from "components/card/Card";
 import Menu from "components/menu/MainMenu";
-export default function CheckTable(props) {
+
+// Assets
+import { MdCheckCircle, MdCancel, MdOutlineError } from "react-icons/md";
+export default function ColumnsTable(props) {
   const { columnsData, tableData } = props;
 
   const columns = useMemo(() => columnsData, [columnsData]);
@@ -61,7 +65,7 @@ export default function CheckTable(props) {
           fontSize='22px'
           fontWeight='700'
           lineHeight='100%'>
-          Check Table
+          Collectors
         </Text>
         <Menu />
       </Flex>
@@ -96,40 +100,58 @@ export default function CheckTable(props) {
                   let data = "";
                   if (cell.column.Header === "NAME") {
                     data = (
+                      <Text color={textColor} fontSize='sm' fontWeight='700'>
+                        {cell.value}
+                      </Text>
+                    );
+                  } else if (cell.column.Header === "STATUS") {
+                    data = (
                       <Flex align='center'>
-                        <Checkbox
-                          defaultChecked={cell.value[1]}
-                          colorScheme='brandScheme'
-                          me='10px'
+                        <Icon
+                          w='24px'
+                          h='24px'
+                          me='5px'
+                          color={
+                            cell.value === "Done"
+                              ? "green.500"
+                              : cell.value === "Unknown"
+                              ? "red.500"
+                              : cell.value === "Ongoing"
+                              ? "orange.500"
+                              : null
+                          }
+                          as={
+                            cell.value === "Done"
+                              ? MdCheckCircle
+                              : cell.value === "Unknown"
+                              ? MdCancel
+                              : cell.value === "Ongoing"
+                              ? MdOutlineError
+                              : null
+                          }
                         />
                         <Text color={textColor} fontSize='sm' fontWeight='700'>
-                          {cell.value[0]}
+                          {cell.value}
                         </Text>
                       </Flex>
+                    );
+                  } else if (cell.column.Header === "TASK LEFT") {
+                    data = (
+                      <Text color={textColor} fontSize='sm' fontWeight='700'>
+                        {cell.value}
+                      </Text>
                     );
                   } else if (cell.column.Header === "PROGRESS") {
                     data = (
                       <Flex align='center'>
-                        <Text
-                          me='10px'
-                          color={textColor}
-                          fontSize='sm'
-                          fontWeight='700'>
-                          {cell.value}%
-                        </Text>
+                        <Progress
+                          variant='table'
+                          colorScheme='brandScheme'
+                          h='8px'
+                          w='108px'
+                          value={cell.value}
+                        />
                       </Flex>
-                    );
-                  } else if (cell.column.Header === "QUANTITY") {
-                    data = (
-                      <Text color={textColor} fontSize='sm' fontWeight='700'>
-                        {cell.value}
-                      </Text>
-                    );
-                  } else if (cell.column.Header === "DATE") {
-                    data = (
-                      <Text color={textColor} fontSize='sm' fontWeight='700'>
-                        {cell.value}
-                      </Text>
                     );
                   }
                   return (

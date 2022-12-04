@@ -13,6 +13,7 @@ export function SidebarBrand() {
 
   return (
     <Flex align='center' direction='column'>
+      CAPSTONE PROJECT
       <HorizonLogo h='26px' w='175px' my='32px' color={logoColor} />
       <HSeparator mb='20px' />
     </Flex>

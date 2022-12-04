@@ -61,7 +61,7 @@ export default function CheckTable(props) {
           fontSize='22px'
           fontWeight='700'
           lineHeight='100%'>
-          Check Table
+          Recently Completed
         </Text>
         <Menu />
       </Flex>
@@ -94,7 +94,7 @@ export default function CheckTable(props) {
               <Tr {...row.getRowProps()} key={index}>
                 {row.cells.map((cell, index) => {
                   let data = "";
-                  if (cell.column.Header === "NAME") {
+                  if (cell.column.Header === "CHECK OUT") {
                     data = (
                       <Flex align='center'>
                         <Checkbox
@@ -107,7 +107,7 @@ export default function CheckTable(props) {
                         </Text>
                       </Flex>
                     );
-                  } else if (cell.column.Header === "PROGRESS") {
+                  } else if (cell.column.Header === "ROLE") {
                     data = (
                       <Flex align='center'>
                         <Text
@@ -115,17 +115,17 @@ export default function CheckTable(props) {
                           color={textColor}
                           fontSize='sm'
                           fontWeight='700'>
-                          {cell.value}%
+                          {cell.value}
                         </Text>
                       </Flex>
                     );
-                  } else if (cell.column.Header === "QUANTITY") {
+                  } else if (cell.column.Header === "TASK COUNT") {
                     data = (
                       <Text color={textColor} fontSize='sm' fontWeight='700'>
                         {cell.value}
                       </Text>
                     );
-                  } else if (cell.column.Header === "DATE") {
+                  } else if (cell.column.Header === "TIME COMPLETED") {
                     data = (
                       <Text color={textColor} fontSize='sm' fontWeight='700'>
                         {cell.value}
