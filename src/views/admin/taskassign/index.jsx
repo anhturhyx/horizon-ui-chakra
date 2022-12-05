@@ -22,19 +22,12 @@
 
 // Chakra imports
 import {
-  Avatar,
   Box,
-  Flex,
-  FormLabel,
-  Icon,
-  Select,
-  SimpleGrid,
   useColorModeValue,
 } from "@chakra-ui/react";
 // Assets
 // Custom components
 import MiniStatistics from "components/card/MiniStatistics";
-import IconBox from "components/icons/IconBox";
 import React from "react";
 import TaskTable from "views/admin/taskassign/tasktable.js";
 import {
