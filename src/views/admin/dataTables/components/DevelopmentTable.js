@@ -18,7 +18,7 @@ import {
   useSortBy,
   useTable,
 } from "react-table";
-
+import {Link} from "react-router-dom"
 // Custom components
 import Card from "components/card/Card";
 import Menu from "components/menu/MainMenu";
@@ -101,7 +101,9 @@ export default function ColumnsTable(props) {
                   if (cell.column.Header === "NAME") {
                     data = (
                       <Text color={textColor} fontSize='sm' fontWeight='700'>
-                        {cell.value}
+                        <Link to = '../admin/task'>
+                          {cell.value}
+                        </Link>
                       </Text>
                     );
                   } else if (cell.column.Header === "STATUS") {

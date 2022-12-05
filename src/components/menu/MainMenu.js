@@ -1,5 +1,5 @@
 import React from "react";
-
+import {useHistory} from "react-router-dom";
 // Chakra imports
 import {
   Icon,
@@ -20,8 +20,15 @@ import {
   MdOutlineLightbulb,
   MdOutlineSettings,
 } from "react-icons/md";
+import { domAnimation } from "framer-motion";
 
 export default function Banner(props) {
+  const history = useHistory();
+
+  const routeChange = () =>{ 
+  let path = './profile'; 
+  history.push(path);
+}
   const { ...rest } = props;
 
   const textColor = useColorModeValue("secondaryGray.500", "white");
@@ -91,7 +98,8 @@ export default function Banner(props) {
           _focus={{
             bg: "transparent",
           }}
-          mb='10px'>
+          mb='10px'
+          onClick={routeChange}>
           <Flex align='center'>
             <Icon as={MdOutlinePerson} h='16px' w='16px' me='8px' />
             <Text fontSize='sm' fontWeight='400'>

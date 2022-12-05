@@ -1,0 +1,62 @@
+[{
+    "district":["5",true],
+    "mcp": "MCP 01", 
+    "address": "27 Vo Van Kiet",
+    "date": "21/9/2022"  
+  },
+  {
+    "district":["6",true],
+    "mcp": "MCP 02", 
+    "address": "123 Oong Hoa",
+    "date": "21/9/2022"  
+  },
+  {
+    "district":["7",true],
+    "mcp": "MCP 03", 
+    "address": "64 Vo Van Tan",
+    "date": "21/9/2022"  
+  },
+  {
+    "district":["8",true],
+    "mcp": "MCP 04", 
+    "address": "22 Le Thuc Hoach",
+    "date": "21/9/2022"  
+  },
+  {
+    "district":["12",true],
+    "mcp": "MCP 05", 
+    "address": "14 Le Lai",
+    "date": "21/9/2022"  
+  },
+  {
+    "district":["5",true],
+    "mcp": "MCP 06", 
+    "address": "27 Vo Van Kiet",
+    "date": "21/9/2022"  
+  },
+  {
+    "district":["6",true],
+    "mcp": "MCP 07", 
+    "address": "123 Cong Hoa",
+    "date": "21/9/2022"  
+  },
+  {
+    "district":["7",true],
+    "mcp": "MCP 08", 
+    "address": "64 Vo Van Tan",
+    "date": "21/9/2022"  
+  },
+  {
+    "district":["8",true],
+    "mcp": "MCP 09", 
+    "address": "22 Le Thuc Hoach",
+    "date": "21/9/2022"  
+  },
+  {
+    "district":["12",true],
+    "mcp": "MCP 10", 
+    "address": "14 Le Lai",
+    "date": "21/9/2022"  
+  }
+  ]
+  

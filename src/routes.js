@@ -11,9 +11,10 @@ import {
 
 // Admin Imports
 import MainDashboard from "views/admin/default";
-import NFTMarketplace from "views/admin/marketplace";
+import Taskinfo from "views/admin/taskassign";
 import Profile from "views/admin/profile";
 import DataTables from "views/admin/dataTables";
+import seemap from "views/admin/map";
 
 const routes = [
   {
@@ -24,19 +25,11 @@ const routes = [
     component: MainDashboard,
   },
   {
-    name: "NFT Marketplace",
+    name: "Maps",
     layout: "/admin",
-    path: "/nft-marketplace",
-    icon: (
-      <Icon
-        as={MdOutlineShoppingCart}
-        width='20px'
-        height='20px'
-        color='inherit'
-      />
-    ),
-    component: NFTMarketplace,
-    secondary: true,
+    path: "/maps",
+    icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
+    component: seemap,
   },
   {
     name: "Data Tables",
@@ -52,6 +45,21 @@ const routes = [
     icon: <Icon as={MdPerson} width='20px' height='20px' color='inherit' />,
     component: Profile,
   },
+  {
+    name: "",
+     layout: "/admin",
+     path: "/task",
+     icon: (
+       <Icon
+         as={MdLock}
+         width='20px'
+         height='20px'
+         color='white'
+       />
+     ),
+     component: Taskinfo,
+     secondary: true,
+   },
   // {
   //   name: "Sign In",
   //   layout: "/auth",

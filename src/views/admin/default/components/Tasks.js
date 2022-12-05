@@ -41,30 +41,13 @@ export default function Conversion(props) {
       </Flex>
       <Box px='11px'>
         <Flex mb='20px'>
-          <Checkbox me='16px' colorScheme='brandScheme' />
-          <Text
-            fontWeight='bold'
-            color={textColor}
-            fontSize='md'
-            textAlign='start'>
-            Landing Page Design
-          </Text>
-          <Icon
-            ms='auto'
-            as={MdDragIndicator}
-            color='secondaryGray.600'
-            w='24px'
-            h='24px'
-          />
-        </Flex>
-        <Flex mb='20px'>
           <Checkbox me='16px' defaultChecked colorScheme='brandScheme' />
           <Text
             fontWeight='bold'
             color={textColor}
             fontSize='md'
             textAlign='start'>
-            Dashboard Builder
+            Leave notice
           </Text>
           <Icon
             ms='auto'
@@ -81,7 +64,7 @@ export default function Conversion(props) {
             color={textColor}
             fontSize='md'
             textAlign='start'>
-            Mobile App Design
+            Task Assignment
           </Text>
           <Icon
             ms='auto'
@@ -98,7 +81,7 @@ export default function Conversion(props) {
             color={textColor}
             fontSize='md'
             textAlign='start'>
-            Illustrations
+            Daily Report
           </Text>
           <Icon
             ms='auto'
@@ -115,7 +98,7 @@ export default function Conversion(props) {
             color={textColor}
             fontSize='md'
             textAlign='start'>
-            Promotional LP
+              Emergency messages
           </Text>
           <Icon
             ms='auto'

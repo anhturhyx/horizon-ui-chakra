@@ -21,32 +21,34 @@
 */
 
 // Chakra imports
-import { Box, SimpleGrid } from "@chakra-ui/react";
-import DevelopmentTable from "views/admin/dataTables/components/DevelopmentTable";
-import CheckTable from "views/admin/dataTables/components/CheckTable";
 import {
-  columnsDataDevelopment,
-  columnsDataCheck,
-} from "views/admin/dataTables/variables/columnsData";
-import tableDataDevelopment from "views/admin/dataTables/variables/tableDataDevelopment.json";
-import tableDataCheck from "views/admin/dataTables/variables/tableDataCheck.json";
+  Avatar,
+  Box,
+  Flex,
+  FormLabel,
+  Icon,
+  Select,
+  SimpleGrid,
+  useColorModeValue,
+} from "@chakra-ui/react";
+// Assets
+// Custom components
+import MiniStatistics from "components/card/MiniStatistics";
+import IconBox from "components/icons/IconBox";
 import React from "react";
+import TaskTable from "views/admin/taskassign/tasktable.js";
+import {
+  columnsDataCheck,
+} from "views/admin/taskassign/columnsData.js";
+import taskinfo from "views/admin/taskassign/task_info.json";
 
-export default function Settings() {
+export default function Taskinfo() {
   // Chakra Color Mode
+  const brandColor = useColorModeValue("brand.500", "white");
+  const boxBg = useColorModeValue("secondaryGray.300", "whiteAlpha.100");
   return (
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
-      <SimpleGrid
-        mb='20px'
-        columns={{ sm: 1, md: 2 }}
-        spacing={{ base: "20px", xl: "20px" }}>
-        <DevelopmentTable
-          columnsData={columnsDataDevelopment}
-          tableData={tableDataDevelopment}
-        />
-        <CheckTable columnsData={columnsDataCheck} 
-                  tableData={tableDataCheck} />
-      </SimpleGrid>
+        <TaskTable columnsData={columnsDataCheck} tableData={taskinfo} />
     </Box>
   );
 }
