@@ -12,7 +12,6 @@ import {
 // Admin Imports
 import MainDashboard from "views/admin/default";
 import Taskinfo from "views/admin/taskassign";
-import Profile from "views/admin/profile";
 import DataTables from "views/admin/dataTables";
 import seemap from "views/admin/map";
 
@@ -39,13 +38,6 @@ const routes = [
     component: DataTables,
   },
   {
-    name: "Profile",
-    layout: "/admin",
-    path: "/profile",
-    icon: <Icon as={MdPerson} width='20px' height='20px' color='inherit' />,
-    component: Profile,
-  },
-  {
     name: "",
      layout: "/admin",
      path: "/task",
@@ -59,14 +51,7 @@ const routes = [
      ),
      component: Taskinfo,
      secondary: true,
-   },
-  // {
-  //   name: "Sign In",
-  //   layout: "/auth",
-  //   path: "/sign-in",
-  //   icon: <Icon as={MdLock} width='20px' height='20px' color='inherit' />,
-  //   component: SignInCentered,
-  // },
+   }
 ];
 
 export default routes;
